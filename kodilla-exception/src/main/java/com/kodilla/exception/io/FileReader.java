@@ -18,6 +18,8 @@ public class FileReader {
         } catch (IOException e) {
             System.out.println("Blad odczytu pliku");
             System.out.println("Oh no! Something went wrong! Error:" + e);
+        }finally {
+            System.out.println("I am gonna be here... always!");
         }
 
         System.out.println(file.getPath());
