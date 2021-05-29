@@ -12,7 +12,6 @@ public final class Country {
     }
 
     public BigDecimal getPeopleQuantity() {
-
         return new BigDecimal(peopleQuantity);
     }
 }
