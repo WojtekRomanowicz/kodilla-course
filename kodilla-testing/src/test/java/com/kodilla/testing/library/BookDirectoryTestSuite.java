@@ -102,16 +102,16 @@ class BookDirectoryTestSuite {
         LibraryUser user1 = new LibraryUser("Andrzej", "Maj", "2021");
         LibraryUser user2 = new LibraryUser("Tomek", "Czerwiec", "06");
         LibraryUser user3 = new LibraryUser("Janek", "Lipiec", "20");
-        when(libraryDatabaseMock.listBooksInHandsOf(user1))
+        when(bookLibrary.listBooksInHandsOf(user1))
                 .thenReturn(generateListOfNBooks(0));
-        when(libraryDatabaseMock.listBooksInHandsOf(user2))
+        when(bookLibrary.listBooksInHandsOf(user2))
                 .thenReturn(generateListOfNBooks(1));
-        when(libraryDatabaseMock.listBooksInHandsOf(user3))
+        when(bookLibrary.listBooksInHandsOf(user3))
                 .thenReturn(generateListOfNBooks(5));
         // When
-        List<Book> listOfBooks0 = libraryDatabaseMock.listBooksInHandsOf(user1);
-        List<Book> listOfBooks1 = libraryDatabaseMock.listBooksInHandsOf(user2);
-        List<Book> listOfBooks5 = libraryDatabaseMock.listBooksInHandsOf(user3);
+        List<Book> listOfBooks0 = bookLibrary.listBooksInHandsOf(user1);
+        List<Book> listOfBooks1 = bookLibrary.listBooksInHandsOf(user2);
+        List<Book> listOfBooks5 = bookLibrary.listBooksInHandsOf(user3);
         // Then
 
        assertEquals(0, listOfBooks0.size());
