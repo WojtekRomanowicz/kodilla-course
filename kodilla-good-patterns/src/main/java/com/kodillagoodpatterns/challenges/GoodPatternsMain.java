@@ -10,14 +10,20 @@ public class GoodPatternsMain{
                 ProductOrderService productOrderService;
                 Client client;
 
-                System.out.println("Witaj w naszym sklepie!");
-                client = makeClient();
+                MovieStories.getMovies()
+                        .entrySet()
+                        .stream()
+                        .flatMap(m -> m.getValue().stream())
+                        .map(s -> s + "!")
+                        .forEach(System.out::print);
 
-                System.out.println(client.toString());
-                productOrderService = selectOptions(client);
-                productOrderService.makeOrderList();
-                productOrderService.showOrderList();
-                productOrderService.finalizeOrder();
+//                System.out.println("Witaj w naszym sklepie!");
+//                client = makeClient();
+//                System.out.println(client.toString());
+//                productOrderService = selectOptions(client);
+//                productOrderService.makeOrderList();
+//                productOrderService.showOrderList();
+//                productOrderService.finalizeOrder();
 
 
 
