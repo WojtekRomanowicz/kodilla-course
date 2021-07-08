@@ -1,5 +1,6 @@
 package com.example.kodillaspring;
 
+import com.kodilla.spring.calculator.Calculator;
 import com.kodilla.spring.forum.ForumUser;
 import com.kodilla.spring.shape.Circle;
 import com.kodilla.spring.shape.Shape;
@@ -57,7 +58,24 @@ class KodillaSpringApplicationTests {
     }
 
     @Test
-    void contextLoads() {
+    void testCalculations(){
+        //Given
+        ApplicationContext context =
+                new AnnotationConfigApplicationContext("com.kodilla.spring");
+        Calculator calculator = context.getBean(Calculator.class);
+
+        //When
+        double add = calculator.add(6, 2);
+        double sub = calculator.sub(6, 2);
+        double mul = calculator.mul(6, 2);
+        double div = calculator.div(6, 2);
+
+        //Then
+        assertEquals(8, add);
+        assertEquals(4, sub);
+        assertEquals(12, mul);
+        assertEquals(3, div);
+
     }
 
 }
