@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 
 
-class KodillaTestingApplicationTests {
+class KodillaTestingApplication {
 
     @Test
     void contextLoads() {

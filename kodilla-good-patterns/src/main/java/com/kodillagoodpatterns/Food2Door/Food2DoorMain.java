@@ -8,12 +8,8 @@ public class Food2DoorMain {
         StoreManager storeManager = new StoreManager();
         StoreGenerator storeGenerator = new StoreGenerator();
 
-        Store ExtraFoodShop = new Store("ExtraFoodShop");
-        Store HealthyShop = new Store("HealthyShop");
-        Store GlutenFreeShop = new Store("GlutenFreeShop");
+        StoreClass ExtraFoodShop = new StoreClass("ExtraFoodShop");
         storeManager.addStoreToList(ExtraFoodShop);
-        storeManager.addStoreToList(HealthyShop);
-        storeManager.addStoreToList(GlutenFreeShop);
 
         storeManager.getStore("ExtraFoodShop").addProduct(new Product("mleko", 4.29, true));
         storeManager.getStore("ExtraFoodShop").addProduct(new Product("jajka", 6.74, true));

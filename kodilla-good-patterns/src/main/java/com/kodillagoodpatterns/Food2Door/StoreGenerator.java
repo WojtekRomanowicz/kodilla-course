@@ -3,15 +3,15 @@ package com.kodillagoodpatterns.Food2Door;
 import java.util.Scanner;
 
 public class StoreGenerator {
-    private Store store;
+    private StoreClass store;
 
-    public Store generateNewStore(){
+    public StoreClass generateNewStore(){
         Scanner scan = new Scanner(System.in);
         boolean endOfAddingProducts = false;
 
         System.out.println("Podaj nazwe sklepu, który chcesz utworzyc: ");
         String storeName = scan.nextLine();
-        store = new Store(storeName);
+        store = new StoreClass(storeName);
 
         while(!endOfAddingProducts) {
             addProductToStore();

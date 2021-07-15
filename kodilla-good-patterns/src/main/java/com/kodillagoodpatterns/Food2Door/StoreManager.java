@@ -10,7 +10,7 @@ public class StoreManager {
         this.storeList = new ArrayList<>();
     }
 
-    public void addStoreToList(Store store){
+    public void addStoreToList(StoreClass store){
         storeList.add(store);
     }
 
