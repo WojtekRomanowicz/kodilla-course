@@ -1,5 +1,7 @@
 package com.example.kodillahibernate.manytomany;
 
+import com.example.kodillahibernate.manytomany.facade.Company;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;

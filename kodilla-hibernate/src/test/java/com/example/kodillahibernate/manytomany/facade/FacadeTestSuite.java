@@ -1,23 +1,26 @@
-package com.example.kodillahibernate.manytomany.dao;
-
+package com.example.kodillahibernate.manytomany.facade;
 
 import com.example.kodillahibernate.manytomany.Employee;
-import com.example.kodillahibernate.manytomany.facade.Company;
+import com.example.kodillahibernate.manytomany.dao.CompanyDao;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
 
 @SpringBootTest
-class CompanyDaoTestSuite {
+public class FacadeTestSuite {
 
     @Autowired
-    private CompanyDao companyDao;
+    CompanyDao companyDao;
 
     @Test
-    void testSaveManyToMany() {
+    void companyFinderTest(){
+
         //Given
+
+        Facade facade = new Facade(companyDao);
+
         Employee johnSmith = new Employee("John", "Smith");
         Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
         Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
@@ -40,24 +43,12 @@ class CompanyDaoTestSuite {
 
         //When
         companyDao.save(softwareMachine);
-        int softwareMachineId = softwareMachine.getId();
         companyDao.save(dataMaesters);
-        int dataMaestersId = dataMaesters.getId();
         companyDao.save(greyMatter);
-        int greyMatterId = greyMatter.getId();
+
+         facade.companyFinder("ter").forEach(System.out::println);
 
         //Then
-        assertNotEquals(0, softwareMachineId);
-        assertNotEquals(0, dataMaestersId);
-        assertNotEquals(0, greyMatterId);
 
-       // CleanUp
-        try {
-            companyDao.deleteById(softwareMachineId);
-            companyDao.deleteById(dataMaestersId);
-            companyDao.deleteById(greyMatterId);
-        } catch (Exception e) {
-            //do nothing
-        }
     }
 }

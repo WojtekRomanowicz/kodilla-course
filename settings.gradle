@@ -1,3 +1,5 @@
+
+
 rootProject.name = 'kodila-course'
 include 'kodilla-testing'
 include 'kodilla-stream'
@@ -10,4 +12,6 @@ include 'kodilla-patterns'
 include 'kodila-jbc'
 include 'kodilla-hibernate'
 include 'kodilla-pattern2'
+
+
 

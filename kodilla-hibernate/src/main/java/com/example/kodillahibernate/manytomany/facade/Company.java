@@ -1,4 +1,6 @@
-package com.example.kodillahibernate.manytomany;
+package com.example.kodillahibernate.manytomany.facade;
+
+import com.example.kodillahibernate.manytomany.Employee;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
