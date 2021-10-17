@@ -19,7 +19,7 @@ public class Facade {
         this.companyDao = companyDao;
     }
 
-    public Iterable<Company> companyFinder(String companyName){
+    public List<Company> companyFinder(String companyName){
 
 
         return companyDao.findCompanyByNameContains(companyName);
