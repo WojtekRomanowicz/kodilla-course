@@ -1,10 +1,10 @@
 package com.kodilla.patterns2.facade.api;
 
-public final class ItemDto {
-    private final Long productId;
-    private final double quantity;
+public  class ItemDto {
+    private  Long productId;
+    private  double quantity;
 
-    public ItemDto(final Long productId, final double quantity) {
+    public ItemDto( Long productId,  double quantity) {
         this.productId = productId;
         this.quantity = quantity;
     }

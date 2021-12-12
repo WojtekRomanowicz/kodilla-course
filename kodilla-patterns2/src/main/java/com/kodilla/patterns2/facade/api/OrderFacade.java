@@ -13,15 +13,15 @@ import java.math.BigDecimal;
 @EnableAspectJAutoProxy
 public class OrderFacade {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(OrderFacade.class);
-    private final  ShopService shopService;
+    private static  Logger LOGGER = LoggerFactory.getLogger(OrderFacade.class);
+    private   ShopService shopService;
 
     @Autowired
     public OrderFacade(ShopService shopService) {
         this.shopService = shopService;
     }
 
-    public void processOrder(final OrderDto order, final  Long userId) throws OrderProcessingException {
+    public void processOrder( OrderDto order, Long userId) throws OrderProcessingException {
         boolean wasError = false;
         Long orderId = shopService.openOrder(userId);
         LOGGER.info("Registering new order, ID: " + orderId);

@@ -1,9 +1,9 @@
 package com.example.kodillahibernate.tasklist;
 
 import com.example.kodillahibernate.task.Task;
+import com.sun.istack.NotNull;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

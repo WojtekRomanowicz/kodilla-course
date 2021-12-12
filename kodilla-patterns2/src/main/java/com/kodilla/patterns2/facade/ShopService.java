@@ -12,9 +12,9 @@ import java.util.Random;
 @Service
 public class ShopService {
 
-    private final List<Order> orders = new ArrayList<>();
-    private final Authenticator authenticator;
-    private final ProductService productService;
+    private  List<Order> orders = new ArrayList<>();
+    private  Authenticator authenticator;
+    private  ProductService productService;
 
     @Autowired
     public ShopService(Authenticator authenticator, ProductService productService) {

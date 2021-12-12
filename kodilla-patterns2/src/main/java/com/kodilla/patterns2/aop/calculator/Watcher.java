@@ -44,10 +44,15 @@ public class Watcher {
 //        + ", User id: " + userId);
 //    }
 
-//    @Before("execution(* com.kodilla.patterns2.facade.api.OrderFacade(..))")
-//    public void logEventOrderFacade(){
-//        LOGGER.info("kurwy kurwy dziwki");
-//    }
+    @Before("execution(* com.kodilla.patterns2.aop.calculator.Calculator.factorial(..))")
+    public void logEventCalculator(){
+        LOGGER.info("Logger działa");
+    }
+
+    @Before("execution(* com.kodilla.patterns2.facade.api.OrderFacade(..))")
+    public void logEventOrderFacade(){
+        LOGGER.info("Logger działa");
+    }
 
 
 }
